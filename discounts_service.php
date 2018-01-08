@@ -5,22 +5,22 @@ $_POST["order"] = '{
     "customer-id": "1",
     "items": [
         {
-        "product-id": "B101",
-        "quantity": "10",
-        "total": "49.9",
-        "price": "4.99"
+        "product-id": "A102",
+        "quantity": "1",
+        "total": "100",
+        "price": "100"
       },
       {
         "product-id": "A101",
-        "quantity": "100",
-        "total": "975",
-        "unit-price": "9.75"
+        "quantity": "1",
+        "total": "10",
+        "unit-price": "10"
       }
     ],
-    "total": "1024.9"
+    "total": "110"
   }';
 
-
+require_once("data_access.php");
 require_once("calc_discounts.php");
 $calculator = new Calc_discounts();
 $order = json_decode($_POST["order"]);
